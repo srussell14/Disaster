@@ -1,6 +1,6 @@
 // code modified based on https://github.com/CodingTrain/website/blob/master/CodingChallenges/CC_057_Earthquake_Viz/P5/sketch.js
 
-var introTime = 60 * 1;
+var introTime = 60 * 3;
 
 // using mapbox for map image https://www.mapbox.com/
 var mapURL = 'https://api.mapbox.com/styles/v1/mapbox/dark-v9/static/'
@@ -104,7 +104,7 @@ function draw() {
     background(100);
     textSize(46);
     textStyle(BOLD);
-    text('Disaster Tracker', -240, 0);
+    text('Disaster Tracker', -260, 0);
 
     return;
   }
@@ -180,7 +180,7 @@ function drawActiveImage() {
   image(activeImage, getXFromLeft(150), getYFromTop(570), 200, 100);
 }
 
-//function to draw the event dots
+//function to draw event dots
 
 function drawCoordinates() {
 	for (var i = 0; i < eonetData.events.length; i++) {
@@ -236,11 +236,11 @@ function drawButton(x, y, buttonWidth, buttonHeight, buttonImage, buttonText) {
   noStroke()
   if (activeFilter === buttonText) {
 // active button color
-    fill(255,0,0);
+    fill(63,80,163);
   }
 // default button color
   else {
-    fill(0,255,0);
+    fill(128,160,249);
   }
   rect(x, y, buttonWidth, buttonHeight);
 // image(buttonImage, x + buttonWidth / 2 - 10, y, 40, 20);
