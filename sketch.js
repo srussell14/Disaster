@@ -30,10 +30,6 @@ var activeImage;
 var volcanoImage;
 
 function preload() {
-  // template literal documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
-  // Alternatively, you could do the same thing with:
-  // var mapImgUrl = mapURL + clon + ',' + clat + ',' + ...
-  // mapimg = loadImage(mapImgUrl)
 
   mapimg = loadImage(`${mapURL}${clon},${clat},${zoom}/${ww}x${hh}?access_token=${accesstoken}`);
   wildfireImage = loadImage('assets/wildfire.png');
@@ -98,7 +94,7 @@ function draw() {
   // it would usually be the top left corner
   image(mapimg, 0, 0);
 
-  //splash page
+  //Introduction page
 
   if (frameCount < introTime) {
     background(100);
